@@ -1,0 +1,60 @@
+<p>viewcust works!</p>
+
+<div class ="page-area">
+    <div class="text-center">
+        <h2>Operations</h2>
+        <p>The following operations can be performed by the Employee</p>
+
+    </div>
+
+<hr class = "mb-3">
+<div class="row">
+<div class="col-md-12">
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Create Account for Customer</h5>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="CustomerId"  name="userid" required>
+        </mat-form-field><br/>
+          <a mat-raised-button routerLink= "/createacct" class="nav-link">Create</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Delete Customer</h5>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="CustomerId"  name="userid" required>
+        </mat-form-field><br/>
+          <a mat-raised-button routerLink= "/deletecust" class="nav-link">Delete</a>
+        </div>
+      </div>
+
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Deposit Amount</h5>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Enter Account Id" [(ngModel)]="userid" name="userid" required>
+            </mat-form-field> <br/>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Enter Amount" [(ngModel)]="userid" name="userid" required>
+                </mat-form-field><br/>
+
+            <a mat-raised-button routerLink="/deposit" class="nav-link">Deposit</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Service Charge Detection</h5>
+          <p class="card-text">Charges will be deducted for not maintaining minimum balance</p>
+          <a mat-raised-button routerLink="/charges" class="nav-link">Deduct</a>
+        </div>
+      </div>
+</div>
+<router-outlet></router-outlet>
+</div>
+</div>

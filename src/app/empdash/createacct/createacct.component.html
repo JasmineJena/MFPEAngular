@@ -1,0 +1,72 @@
+<!-- <div class="container">
+    <div>
+        User Name : <input type="text" name="userid" [(ngModel)]="userid"> Password : <input type="password" name="password" [(ngModel)]="password">
+    </div>
+    <button (click)=checkLogin() class="btn btn-success">
+    Login
+  </button>
+</div> -->
+
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Create Account</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Enter CustomerId" [(ngModel)]="userid" name="userid" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Enter Account No." [(ngModel)]="userid" type="text" name="password" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Enter Amount" [(ngModel)]="userid" type="password" name="password" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <form>
+                            
+                                <mat-label>Select an option</mat-label>
+                                <mat-select [(value)]="selected">
+                                  <mat-option value="savings">Savings</mat-option>
+                                  <mat-option value="current">Current</mat-option>
+            
+                                </mat-select>
+                                </form>
+                                </mat-form-field>
+                            
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Enter Owner Name" [(ngModel)]="userid" type="text" name="password" required>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            
+                <p *ngIf="error" class="error">
+                    {{ error }}
+                </p>
+            </table>
+        </form>
+        
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button (click)="checkLogin()" color="primary">Create Account</button>
+    </mat-card-actions>
+</mat-card>

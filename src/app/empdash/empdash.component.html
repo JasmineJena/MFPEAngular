@@ -1,0 +1,35 @@
+
+<div class ="page-area">
+    <div class="text-center">
+        <h2>Operations</h2>
+        <p>The following operations can be performed by the Employee</p>
+
+    </div>
+
+<hr class = "mb-3">
+<div class="row">
+<div class="col-md-12">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Create Customer</h5>
+          <p class="card-text">Click the button to create a customer</p>
+          <a mat-raised-button routerLink= "/createcust" class="nav-link">Create</a>
+        </div>
+      </div>
+
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">View Customer</h5>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="CustomerId"  name="userid" required>
+        </mat-form-field><br/>
+          <a mat-raised-button routerLink="/viewcust" class="nav-link">View</a>
+        </div>
+      </div>
+
+
+</div>
+<router-outlet></router-outlet>
+</div>
+</div>
