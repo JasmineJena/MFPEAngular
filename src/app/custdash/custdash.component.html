@@ -1,0 +1,69 @@
+<div class ="page-area">
+    <div class="text-center">
+        <h2>Operations</h2>
+        <p>The following operations can be performed by the Customer</p>
+
+    </div>
+
+<hr class = "mb-3">
+<div class="row">
+<div class="col-md-12">
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Create Account for Customer</h5>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="CustomerId"  name="userid" required>
+        </mat-form-field><br/>
+          <a mat-raised-button routerLink= "/createacct" class="nav-link">Create</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Delete Customer</h5>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="CustomerId"  name="userid" required>
+        </mat-form-field><br/>
+          <a mat-raised-button routerLink= "/deletecust" class="nav-link">Delete</a>
+        </div>
+      </div>
+
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Withdraw Amount</h5>
+          <p class="card-text">Enter amount to be withdrawn</p>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Enter Target Account Id" [(ngModel)]="userid" name="userid" required>
+            </mat-form-field> <br/>
+
+            
+            <p class="card-text">Minimum balance of Rs.1000 should be maintained</p>
+
+            <a mat-raised-button routerLink="#$any()" class="nav-link">Withdraw</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Transfer Amount</h5>
+          
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Enter Target Account Id" [(ngModel)]="userid" name="userid" required>
+            </mat-form-field> <br/>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Enter Amount" [(ngModel)]="userid" name="userid" required>
+                </mat-form-field> <br/>
+
+            
+            <p class="card-text">Minimum balance of Rs.1000 should be maintained</p>
+
+            <a mat-raised-button routerLink="#$any()" class="nav-link">Transfer</a>
+        </div>
+      </div>
+</div>
+<router-outlet></router-outlet>
+</div>
+</div>
