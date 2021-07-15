@@ -11,5 +11,5 @@ export class ViewcustComponent implements OnInit {
 
   ngOnInit() {
   }
-
+ 
 }

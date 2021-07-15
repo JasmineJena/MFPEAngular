@@ -16,7 +16,7 @@ import { ChargesComponent } from './empdash/charges/charges.component';
 import { CustdashComponent } from './custdash/custdash.component';
 
 const routes: Routes = [
-  { path: '', component: EmployeeComponent,canActivate:[AuthGaurdService] },
+  { path: '', component: HomeComponent,canActivate:[AuthGaurdService] },
   { path: 'addemployee', component: AddEmployeeComponent,canActivate:[AuthGaurdService]},
   { path: 'login', component: LoginComponent },
   { path: 'logout', component: LogoutComponent,canActivate:[AuthGaurdService] },

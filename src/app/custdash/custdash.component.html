@@ -1,6 +1,6 @@
 <div class ="page-area">
     <div class="text-center">
-        <h2>Operations</h2>
+        <h2>Customer Operations</h2>
         <p>The following operations can be performed by the Customer</p>
 
     </div>
@@ -9,25 +9,108 @@
 <div class="row">
 <div class="col-md-12">
 
-      <div class="card" style="width: 18rem;">
+      <div class="carddet">
         <div class="card-body">
-          <h5 class="card-title">Create Account for Customer</h5>
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="CustomerId"  name="userid" required>
-        </mat-form-field><br/>
-          <a mat-raised-button routerLink= "/createacct" class="nav-link">Create</a>
+          <h5 class="card-title">Customer Details</h5>
+          <p class="card-text">Personal Details</p>
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> Customer ID </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+
+            <!-- Id Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> Customer Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> DOB </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> PAN No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> Address </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+            </ng-container>
+
+            
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <br/>
+          
+
+
+            <!-- Customer Account Details -->
+          <p class="card-text">Account Details</p> <br/>
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Id Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> Account Id </th>
+              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Current Balance </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> Account Type </th>
+              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> Owner Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+            </ng-container>
+
+            
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+
+          <br/>
         </div>
       </div>
 
-      <div class="card" style="width: 18rem;">
+
+
+
+
+      <div class="carddet">
         <div class="card-body">
-          <h5 class="card-title">Delete Customer</h5>
+          <h5 class="card-title">Transaction Details</h5>
           <mat-form-field class="example-full-width">
             <input matInput placeholder="CustomerId"  name="userid" required>
         </mat-form-field><br/>
-          <a mat-raised-button routerLink= "/deletecust" class="nav-link">Delete</a>
+          <a mat-raised-button type="submit" class="nav-link">Submit</a>
         </div>
-      </div>
+      </div><br/> <br/>
 
 
       <div class="card" style="width: 18rem;">
